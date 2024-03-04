@@ -20,8 +20,9 @@ public class Keyboard {
         while (true) {
             System.out.print(prompt);
             String userInput = input.nextLine();
-            if (validation == null && null != userInput && userInput.length() > 0){
+            if (validation == "" && null != userInput && userInput.length() > 0){
                 result = Integer.parseInt(userInput); // missing validation to check if value is 1 - 100
+                break;
             }
             if (null != userInput && validation.contains(userInput) && userInput.length() > 0) {
                 result = Integer.parseInt(userInput);
